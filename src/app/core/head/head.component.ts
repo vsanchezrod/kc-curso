@@ -9,12 +9,13 @@ export class HeadComponent implements OnInit {
 
   // Se declaran las variables de la clase
   public title: string;
+  public logo: string;
 
   constructor() { }
 
   ngOnInit() {
-    //title = 'KeepCoding!!!';
-    //logo = './assets/logo_angular.svg';
+    this.title = 'KeepCoding!!!';
+    this.logo = '../../../assets/logo_angular.svg';
   }
 
 }
