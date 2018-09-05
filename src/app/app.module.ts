@@ -4,8 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-// Se importa el módulo core
+// Se importa el módulo core (estructura o layout de la APP)
 import { CoreModule } from './core/core.module';
+
+// Se importan los módulos funcionales (del menú)
+import { HomeModule } from './home/home.module';
+import { AboutModule } from './about/about.module';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +19,9 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    HomeModule,
+    AboutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
