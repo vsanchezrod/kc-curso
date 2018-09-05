@@ -7,9 +7,13 @@ import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 import { MainComponent } from './main/main.component';
 
+// Se importa RouterModule
+import { RouterModule } from '@angular/router';
+
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   declarations: [
     HeadComponent,

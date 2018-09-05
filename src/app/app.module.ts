@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+// Se va a encargar de todo el proceso de enrutamiento
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 
 // Se importa el módulo core (estructura o layout de la APP)
