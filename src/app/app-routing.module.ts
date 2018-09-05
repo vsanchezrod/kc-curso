@@ -8,7 +8,12 @@ import { AboutComponent } from './about/about.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'home' }
+  // Lazy Paths
+  { path: 'tareas', loadChildren: './tareas/tareas.module#TareasModule' },
+  { path: 'contactos', loadChildren: './contactos/contactos.module#ContactosModule' },
+  { path: 'libros', loadChildren: './libros/libros.module#LibrosModule' },
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
+  { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
 @NgModule({
