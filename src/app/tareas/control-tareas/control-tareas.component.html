@@ -1,0 +1,7 @@
+<!-- Componentes HIJOS de control-tareas-->
+
+<!-- Elemento emisor del evento, que va a llamar al método del padre addTarea()-->
+<kc-item (eventoAdd)="addTarea($event)"></kc-item>
+
+<!-- Se le pasa al hijo la propiedad creada items, al que se le pasa la variable con todas las tareas-->
+<kc-lista [items]="tareas"></kc-lista>
