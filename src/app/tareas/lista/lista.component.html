@@ -1,3 +1,15 @@
-<p>
-    {{ items | json }}
-</p>
+<div *ngIf="items.length" class="card">
+    <div class="card-header">
+        <h4 class="card-title">Lista Tareas</h4>
+    </div>
+    <div class="card-body">
+        <ul>
+            <li *ngFor="let item of items; let i = index">{{ i + 1 }}. {{ item }}
+                <button (click)="btnBorrar(i)" type="button" class="btn btn-danger btn-sm">Borrar</button>
+            </li>
+        </ul>
+    </div>
+    <div class="card-footer text-muted">
+
+    </div>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'kc-lista',
@@ -10,9 +10,17 @@ export class ListaComponent implements OnInit {
   // Variable de entrada para recibir la lista de tareas desde el padre
   @Input() items;
 
-  constructor() { }
+  // Se crea una output para informar al componente padre de que se quiere borrar una tarea
+  @Output() eventBorrar: EventEmitter<number>;
+
+  constructor() {
+    this.eventBorrar = new EventEmitter();
+   }
 
   ngOnInit() {
   }
 
+  btnBorrar(posicion) {
+    this.eventBorrar.emit(posicion);
+  }
 }

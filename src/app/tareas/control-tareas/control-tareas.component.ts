@@ -20,11 +20,10 @@ export class ControlTareasComponent implements OnInit {
   // Métodos para añadir y borrar tareas
   addTarea(tarea) {
     this.tareas.push(tarea);
-    console.log(this.tareas);
   }
 
-  deleteTarea(tarea) {
-    console.log(tarea);
+  deleteTarea(posicion) {
+    this.tareas.splice(posicion, 1);
   }
 
 }
