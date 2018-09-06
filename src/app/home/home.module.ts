@@ -7,12 +7,13 @@ import { FormsModule } from '@angular/forms';
 // Componentes
 import { HomeComponent } from './home.component';
 import { SaludoComponent } from './saludo/saludo.component';
+import { ReferenciasComponent } from './referencias/referencias.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule
   ],
-  declarations: [HomeComponent, SaludoComponent]
+  declarations: [HomeComponent, SaludoComponent, ReferenciasComponent]
 })
 export class HomeModule { }
