@@ -7,9 +7,13 @@ import { ContactosRoutingModule } from './contactos-routing.module';
 import { ContactosComponent } from './contactos.component';
 import { FormVdComponent } from './form-vd/form-vd.component';
 
+// Módulos importados
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     ContactosRoutingModule
   ],
   declarations: [
