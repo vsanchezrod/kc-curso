@@ -4,6 +4,7 @@
 // Importación de Interfaces
 import { Grupo } from './grupo.model';
 import { Sector } from './sector.model';
+import { Aficion } from './aficion.model';
 
 // Imprescidible exportar la clase para poderla usar
 export class Contacto {
@@ -14,5 +15,11 @@ export class Contacto {
     phoneNumber: string;
     grupo: Grupo;
     sector: Sector;
-    aficiones: Array<string>;
+    aficiones: Array<Aficion>;
+
+    constructor() {
+
+        // Los arrays si que es necesario inicializarlos
+        this.aficiones = [];
+    }
 }

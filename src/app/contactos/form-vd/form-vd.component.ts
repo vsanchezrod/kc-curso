@@ -4,9 +4,10 @@ import { Component, OnInit } from '@angular/core';
 import { Contacto } from '../../models/contacto.model';
 import { Grupo } from '../../models/grupo.model';
 import { Sector } from '../../models/sector.model';
+import { Aficion } from '../../models/aficion.model';
 
 // Importo las constantes del maestro.datos.ts
-import { GRUPOS, SECTORES } from '../../models/maestro.datos';
+import { GRUPOS, SECTORES, AFICIONES } from '../../models/maestro.datos';
 
 @Component({
   selector: 'kc-form-vd',
@@ -20,6 +21,7 @@ export class FormVdComponent implements OnInit {
 
   public grupos: Array<Grupo>;
   public sectores: Array<Sector>;
+  public aficiones: Array<Aficion>;
 
 
   constructor() { }
@@ -29,6 +31,26 @@ export class FormVdComponent implements OnInit {
     this.contacto = new Contacto();
     this.grupos = GRUPOS;
     this.sectores = SECTORES;
+    this.aficiones = AFICIONES;
   }
+
+
+  // Método para gestionar las aficiones
+  addAficion(evento) {
+    if (evento.target.checked) {
+      this.contacto.aficiones.push(evento.target.id);
+    } else {
+      this.contacto.aficiones.splice(
+        this.contacto.aficiones.indexOf(evento.target.id)
+      );
+    }
+  }
+
+  // Método para enviar el formulario
+  // Tendría que pasar la información al backend
+  enviar() {
+    console.log('Datos enviadas');
+  }
+
 
 }

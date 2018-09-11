@@ -1,5 +1,6 @@
 import { Grupo } from './grupo.model';
 import { Sector } from './sector.model';
+import { Aficion } from './aficion.model';
 
 
 // Se crea una constante que contendrá los GRUPOS posibles
@@ -51,6 +52,30 @@ export const SECTORES: Array<Sector> = [
     {
         id: 4,
         nombre: 'Otros',
+        descripcion: ''
+    }
+];
+
+// Se crea una constante que contendrá los SECTORES posibles
+export const AFICIONES: Array<Aficion> = [
+    {
+        id: 1,
+        nombre: 'Lectura',
+        descripcion: ''
+    },
+    {
+        id: 2,
+        nombre: 'Música',
+        descripcion: ''
+    },
+    {
+        id: 3,
+        nombre: 'Deporte',
+        descripcion: ''
+    },
+    {
+        id: 4,
+        nombre: 'Otro',
         descripcion: ''
     }
 ];
